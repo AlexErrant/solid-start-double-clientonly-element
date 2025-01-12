@@ -1,5 +1,7 @@
 import { Title } from "@solidjs/meta";
-import Counter from "~/components/Counter";
+import { clientOnly } from "@solidjs/start";
+
+const Counter = clientOnly(async () => await import("~/components/Counter"));
 
 export default function Home() {
   return (
